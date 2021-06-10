@@ -8,14 +8,14 @@ use Illuminate\Http\RedirectResponse;
 
 class PastesController extends Controller
 {
-    public function index() {
+    public function homePage() {
         $data = DB::table('pastes')
             ->orderBy('id', 'desc')
             ->get();
         return view('homePage', ['data' => $data]);
     }
 
-    public function getData(Request $request) {
+    public function addPaste(Request $request) {
         DB::table('pastes')->insertGetId([
             'title' => $request->input('title'),
             'code' => $request->input('code')
@@ -31,11 +31,6 @@ class PastesController extends Controller
         return view('viewPaste', ['data' => $data]);
     }
 
-    public function deletePaste($id) {
-        DB::table('pastes')->where('id', '=', $id)->delete();
-        return redirect('/');
-    }
-
     public function updatePaste($id, Request $request) {
         DB::table('pastes')
               ->where('id', '=', $id)
@@ -43,6 +38,11 @@ class PastesController extends Controller
                   'title' => $request->input('title'),
                   'code' => $request->input('code')
               ]);
+        return redirect('/');
+    }
+
+    public function deletePaste($id) {
+        DB::table('pastes')->where('id', '=', $id)->delete();
         return redirect('/');
     }
 }

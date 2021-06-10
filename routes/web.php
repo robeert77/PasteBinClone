@@ -14,18 +14,12 @@ use App\Http\Controllers\PastesController;
 |
 */
 
-Route::get('/', [PastesController::class, 'index']);
+Route::get('/', [PastesController::class, 'homePage']);
 
-Route::post('/addPaste', [PastesController::class, 'getData']);
+Route::post('/addPaste', [PastesController::class, 'addPaste']);
 
 Route::get('/paste{id}', [PastesController::class, 'showPaste']);
 
-Route::get('/delete/paste{id}', [PastesController::class, 'deletePaste']);
-
 Route::get('/update/paste{id}', [PastesController::class, 'updatePaste']);
 
-// use it to see all data from pastes table
-Route::get('/showData', function() {
-    $data = DB::select('select * from pastes');
-    dd($data);
-});
+Route::get('/delete/paste{id}', [PastesController::class, 'deletePaste']);
