@@ -8,11 +8,11 @@
                     @csrf
                     <textarea class="mb-2 form-control bg-light border border-2 rounded border-secondary text-nowrap code-section" rows="25"
                     name="code" placeholder="Paste your code here"></textarea>
-                    <div class="col-9">
+                    <div class="col-sm-8 pe-0 pe-sm-4">
                         <input type="text" class="py-2 form-control bg-light border border-2 rounded border-secondary code-section" name="title" placeholder="Your code title">
                     </div>
-                    <div class="col-3 text-end">
-                        <button type="submit" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill">Save it</button>
+                    <div class="col-sm-4 my-3 my-sm-0 text-end">
+                        <button type="submit" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill" style="width: 100%;">Save it</button>
                     </div>
                 </form>
             </div>
