@@ -16,10 +16,10 @@ use App\Http\Controllers\PastesController;
 
 Route::get('/', [PastesController::class, 'homePage']);
 
-Route::post('/addPaste', [PastesController::class, 'addPaste']);
+Route::post('/paste/add', [PastesController::class, 'addPaste']);
 
-Route::get('/paste{id}', [PastesController::class, 'showPaste']);
+Route::get('/paste/{id}/view', [PastesController::class, 'showPaste']);
 
-Route::get('/update/paste{id}', [PastesController::class, 'updatePaste']);
+Route::get('/paste/{id}/update', [PastesController::class, 'updatePaste']);
 
-Route::get('/delete/paste{id}', [PastesController::class, 'deletePaste']);
+Route::get('/paste/{id}/delete', [PastesController::class, 'deletePaste']);

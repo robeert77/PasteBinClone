@@ -4,7 +4,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-lg-7">
-                <form class="row g-0" action="/addPaste" method="post">
+                <form class="row g-0" action="/paste/add" method="post">
                     @csrf
                     <textarea class="mb-2 form-control bg-light border border-2 rounded border-secondary text-nowrap code-section" rows="25"
                     name="code" placeholder="Paste your code here"></textarea>
@@ -20,7 +20,7 @@
                 <div class="container overflow-auto px-0 px-lg-2 mt-4 mt-lg-0" style="max-height: 500px;">
                     @foreach($data as $item)
                         <div class="card mb-2">
-                            <a href="/paste{{ $item->id }}" class="code-title">
+                            <a href="/paste/{{ $item->id }}/view" class="code-title">
                                 <h5 class="card-header bg-light text-uppercase fs-6">{{ $item->title }}</h5>
                             </a>
                             <div class="card-body">

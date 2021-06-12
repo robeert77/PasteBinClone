@@ -13,10 +13,10 @@
                 <div class="col-lg-6">
                     <div class="row my-3 my-lg-0 text-end">
                         <div class="col-sm-4 px-sm-2 px-2">
-                            <button type="submit" formaction="/update/paste{{ $data[0]->id }}" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill" style="width: 100%;">Save changes</button>
+                            <button type="submit" formaction="/paste/{{ $data[0]->id }}/update" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill" style="width: 100%;">Save changes</button>
                         </div>
                         <div class="col-sm-4 px-sm-3 px-2 my-3 my-sm-0">
-                            <button type="submit" formaction="/delete/paste{{ $data[0]->id }}" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill" style="width: 100%;">Delete paste</button>
+                            <button type="submit" formaction="/paste/{{ $data[0]->id }}/delete" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill" style="width: 100%;">Delete paste</button>
                         </div>
                         <div class="col-sm-4 px-sm-2 px-2">
                             <a href="/" type="submit" class="py-1 px-3 btn btn-light border border-2 rounded border-secondary rounded-pill" style="width: 100%;">Go back</a>
